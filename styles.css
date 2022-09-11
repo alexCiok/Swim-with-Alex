@@ -1,0 +1,319 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@keyframes float-down{
+    50% {
+        opacity: 0.8
+    }
+    80% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+}
+:root {
+    --primary-color-light : #EBC7E8; /*#C4C1D9;*/
+    --primary-color-mid : #FCF8E8;
+    --primary-color-dark : #645CAA;
+    --secondary-color-light :  /* rgb(155, 186, 189); */;
+    --secondary-color-dark : #51777c;
+    --accent-color : #EBC7E8;
+    --contact-color : #8E8BA3;
+    --ff-headers : Arial, Helvetica, sans-serif;
+    --ff-body-text : ;
+}
+body{
+    width: 100%;
+    padding: 0;
+}
+p{
+    font-size: 1.25rem;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
+}
+section{
+    padding: 5% 30%;
+    max-width: 100vw;
+}
+@media (min-width: 60vw) {
+    section{
+        padding: 5% 15%;
+        max-height: 100vh;
+    }    
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+
+.container{
+    display: flex;  
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: row;
+}
+.flex-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+section h2{
+    font-size: clamp(3rem, 4rem, 6rem);
+    line-height: 5rem;
+}
+
+.navbar{
+    background-color: rgba(0,0,0,.6);
+    text-transform: uppercase;
+    font-family: var(--ff-headers);
+    position: sticky; 
+    top:0;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+.navbar a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    float: right;       
+    padding: 1em 2em;
+    text-align: center;
+}
+.navbar a:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+.panel-1{
+    height: 80vh; 
+}
+.swimmer-bg{
+    background-color: var(--primary-color-light);
+}
+.panel-1 h1{
+    font-size: clamp(3.5rem, 6rem ,8rem);
+    text-align: center;  
+    padding-top: 30%; 
+    color:#fafafa;
+    text-transform: uppercase;
+    font-family: var(--ff-headers);
+    line-height: 8rem;
+}
+.scroll-btn{
+    height: 10vh;
+    width: 5vh;
+    border: .5em solid #fafafa;
+    border-radius: 3em;
+}
+.scroll-btn:before{
+    display: inherit;
+    content: '';
+    margin: auto;    
+    height: .8em;
+    width: .8em;
+    border-radius: 50%;
+    background-color: #fafafa;
+    animation: float-down 2s infinite;
+}
+
+/*
+     'Learning to Swim' panel 
+*/
+.panel-2{
+    background: var(--primary-color-dark);
+    color: white;
+    min-height: 95vh;
+    flex-direction: column;
+    font-family: var(--ff-headers);
+}
+.panel-2 .heading{
+    position: relative;
+    text-align: center;
+    bottom: 5vh;
+}
+.panel-2 .heading p{
+    font-size: .8rem;
+}
+.panel-2 h2{
+    font-size: clamp(3rem,4rem,6rem);
+    max-width: 25ch; 
+    line-height: 1.2em;
+}
+.cards{
+    display: flex;
+    position: relative;
+    bottom: -15vh;
+}
+.flip-card {
+    background-color: transparent;
+    width: 23vw;
+    height: 23vh;
+    border: 2px solid grey;
+  }
+@media(max-width: 600px){
+    .panel-2{
+        height: 100vh;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        top: 5vh;
+    }
+    .flip-card{
+        width: 70vw;
+        height: 12vh;
+    }
+}  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do a horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {  
+    text-decoration: underline; 
+    display:flex;
+    justify-content: center;
+    background-color: var(--primary-color-mid);
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {    
+    background-color: var(--contact-color);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+.flip-card-back h1{
+text-decoration: underline;
+}
+.flip-card-back p{
+    position:relative;
+    top: 1em;
+}
+.swim-icon{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+}
+i{
+    opacity: 70%;
+}
+.panel-3{
+    background-color: var(--primary-color-mid);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    column-gap: 10vw;
+    padding: 10vw;
+}
+.headshot{
+    max-height: 50vh;
+    margin : 15% 0;
+}
+.sm-headshot{
+    height: 0;
+    width: 0;
+}
+.intro-instructor{
+    color: #4a447ecc;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5em;    
+    padding-bottom: 3ch;  
+    padding-top: 1.5em;
+}
+.instructor-text{
+    flex-direction: column;
+    text-align: center;
+}
+.instructor-text p{
+    text-align: left;  
+    max-width: 60ch;
+}
+@media (max-width:800px){
+    .sm-headshot{
+        height: 40vh;
+        width: 40vh;
+        visibility: visible;
+    }
+    .headshot{
+        height:0;
+        width:0;
+        visibility: hidden;
+    }
+    .instructor-text p, .intro-instructor{
+        margin:0;
+    }
+}
+
+.certs {
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    column-gap: 10vw;
+}
+
+.logo {
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+    width: clamp(6vh, 6vw, 8vw);
+    justify-content: center;
+}
+.panel-4{
+    height: 30vh;
+    background-color: rgba(0,0,0,80%);
+    color: rgb(221, 212, 212);    
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.split{
+    display: flex;
+    column-gap: 10vw;
+}

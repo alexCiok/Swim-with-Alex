@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <title>Swim With Alex</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="#contact-panel">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <section class="swimmer-bg text-center">  
+       
+        <div class="panel-1">
+        <h1>Swim<br>With<br>Alex</h1></div>
+        <a class="scroll-btn" href="#panel-2"></a>
+    </section>
+
+    <section id="panel-2" class="panel-2 container text-center">
+        <div class="heading">    
+            <div class="swim-icon">
+                <i class="fa-solid fa-water fa-4x"></i>
+                <i class="fa-solid fa-person-swimming fa-4x"></i>
+                <i class="fa-solid fa-water fa-4x"></i>
+            </div>
+            <h2>Learning To Swim</h2>
+            <p>can be scary...<span>but it doesn't have to be!</span></p>
+        </div>
+        <div class="cards">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>Respect <i class="fa-solid fa-hand-fist"></i></h1>
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Respect</h1>
+                        <p>I strive to make sure student is comfortable and never push outside their abilities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>Safety <i class="fa-solid fa-shield"></i></h1></div>
+                    <div class="flip-card-back">
+                        <h1>Safety</h1>
+                        <p>With 5+ years of lifeguarding experience, safety is always my priority</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="fun flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>Fun <i class="fa-solid fa-face-smile"></i></h1>
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Fun</h1>
+                        <p>We learn best when having fun. All of my lessons embrace this through challenges & games</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section class="panel-3 flex-container">
+        <div class="">            
+            <img class="headshot flex-item" src="./images/HeadShot.jpg" alt="head shot of Alex Ciok">
+        </div>
+        <div class="instructor-text flex-item">
+            <div class="intro-instructor">
+                <h2>Meet Your Instructor</h2>
+            </div>
+            <img class="sm-headshot flex-item" src="./images/HeadShot.jpg" alt="head shot of Alex Ciok">          
+            <p>Hey! My name is Alex Ciok and I create tailored swimming plans focused on helping you reach your swimming goals.</p>
+            <br>    
+            <p>Over the past five years I've taught hundreds of students from all walks of life, and I know - </p>
+                <div class="certs">
+                    <img class="logo" src="./images/red-cross-logo.png" alt="Canadian Red Cross Logo">
+                    <img class="logo ls" src="./images/banner_logo_improved.jpg" alt="Lifesaving Society Logo">
+                </div>
+        </div> 
+    </section>
+
+    <section id='contact-panel'class="panel-4 contact">
+        <div class="text-center">
+            <h1>Contact</h1>
+        </div>
+        
+        <div class="split">
+            <p>Reach out today to book a free swimming assessment!</p>
+            <div class="to-do">Add dropdown containing 'lesson type' and swimming experience</div>
+            <form class='flex-item' action="https://formsubmit.co/741c0fa84f5ae40415ad3910ee2480ae" method="post">
+                <div class="flex-col">                
+                <input type="text" name="name" placeholder="First Name" required>
+                <input type="text" name="name" placeholder="Last Name" required></div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New email happy!">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">                
+                <button type="submit">Send!</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
